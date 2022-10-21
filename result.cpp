@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-#include "result.h"
+#include "resistance.h"
 
 double
 result(int K, double resistance[])
