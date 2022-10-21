@@ -1,14 +1,16 @@
 #include <math.h>
 #include <stdio.h>
 
-#define EPSILON 1e-5
+#define EPSILON 1
 
 int check (int K, double resistance[], double resistance_final)
 {
     double sum = 0;
+    //printf ("!!%lg\n", resistance_final);
 
     for (int i = 0; i < K; i++)
     {
+        //printf ("%lg\n", resistance[i]);
         sum += fabs(resistance[i] - resistance_final);
     }
 
