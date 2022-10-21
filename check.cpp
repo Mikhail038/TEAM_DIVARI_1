@@ -7,7 +7,7 @@ int check (int K, double resistance[], double resistance_final)
 {
     double sum = 0;
 
-    for (int i = 0; i < (K + 1); i++)
+    for (int i = 0; i < K; i++)
     {
         sum += (resistance[i] - resistance_final);
     }
