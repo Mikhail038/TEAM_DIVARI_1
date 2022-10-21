@@ -12,9 +12,9 @@ int check (int K, double resistance[], double resistance_final)
         sum += (resistance[i] - resistance_final);
     }
 
-    double sr_otkl = sum / K;
+    double sr_otkl = fabs(sum / K);
 
-    printf("Average deflection %f\n", fabs(sr_otkl));
+    printf("Average deflection %f\n", sr_otkl);
 
     if (sr_otkl < EPSILON) 
     {
