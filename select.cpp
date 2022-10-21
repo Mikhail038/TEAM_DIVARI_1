@@ -1,3 +1,7 @@
+#include <math.h>
+#include <stdio.h>
+
+
 int data_select(int M, double resistance[]){
     double resistance_average;
     for (int i = 0; i < M; i++){
@@ -11,6 +15,7 @@ int data_select(int M, double resistance[]){
             delta++;
         }
         else{
+            //printf ("%lg -> %lg\n", resistance[i], resistance[check]);
             resistance[i] = resistance[check];
             check++;
             i++;

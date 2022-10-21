@@ -20,9 +20,8 @@ result(int K, double resistance[])
         deviation = sqrt(deviation) / K;
 
         // Print the result with deviation.
-        printf("Resistance = %.3lf+-%.3lf\n", result, deviation);
+        printf("Resistance = %lg +- %lg\n", result, deviation);
 
         // Return result.
         return result;
 }
-

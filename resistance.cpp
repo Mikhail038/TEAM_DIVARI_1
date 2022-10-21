@@ -28,7 +28,7 @@ int main ()
             return 1;
         }
 
-        resistance[i] = voltage[i] / current[i];
+        resistance[i] = 1000 * (voltage[i] / current[i]);
     }
 
     int K = data_select (M, resistance);

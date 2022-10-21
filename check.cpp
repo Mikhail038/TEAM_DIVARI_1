@@ -3,20 +3,20 @@
 
 #define EPSILON 1e-5
 
-int check (int K, double resistance[], double resistance_final) 
+int check (int K, double resistance[], double resistance_final)
 {
     double sum = 0;
 
     for (int i = 0; i < K; i++)
     {
-        sum += (resistance[i] - resistance_final);
+        sum += fabs(resistance[i] - resistance_final);
     }
 
-    double sr_otkl = fabs(sum / K);
+    double sr_otkl = sum / K;
 
-    printf("Average deflection %f\n", sr_otkl);
+    printf("Average deflection = %lg\n", sr_otkl);
 
-    if (sr_otkl < EPSILON) 
+    if (sr_otkl < EPSILON)
     {
         return 1;
     } else {
