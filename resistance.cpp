@@ -1,5 +1,6 @@
-#include "resistance.h"
 
+#include <stdio.h>
+#include "resistance.h"
 
 const int N = 100;
 const double epsilon = 1e-6;
@@ -30,11 +31,11 @@ int main ()
         resistance[i] = voltage[i] / current[i];
     }
 
-    int K = data_select (M, resistance[]);
+    int K = data_select (M, resistance);
 
-    double resistance_final = result (K, resistance[]);
+    double resistance_final = result (K, resistance);
 
-    if (check (K, resistance[], resistance_final) != 1)
+    if (check (K, resistance, resistance_final) != 1)
     {
         printf ("Bad data!\n");
     }
